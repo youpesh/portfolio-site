@@ -1,0 +1,36 @@
+/* Custom overrides for the mirrored Framer site.
+ *
+ * Tip: Prefer stable selectors such as:
+ * - [data-framer-name="..."]
+ * - [data-framer-component-type="..."]
+ * - #main
+ *
+ * Avoid relying on auto-generated classnames like .framer-abc123
+ * unless you accept that future re-mirrors may change them.
+ */
+
+/* Example: set a consistent background color */
+/* body { background: #fff; } */
+
+/* Hide Framer's floating badge / template overlay */
+#__framer-badge-container {
+  display: none !important;
+}
+
+/* Extra safety: hide the SVG badge if it ever appears outside the container */
+[data-framer-name="framer_buy_template_badge"] {
+  display: none !important;
+}
+
+/* Extra safety: hide the template CTA links */
+a[href*="framer.com/marketplace/templates"] {
+  display: none !important;
+}
+
+/* Hide the top "A minimal portfolio template / View all templates" promo strip */
+a[href^="https://www.framer.com/@bryn-taylor"] {
+  display: none !important;
+}
+
+
+

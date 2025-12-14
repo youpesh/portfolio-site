@@ -32,5 +32,33 @@ a[href^="https://www.framer.com/@bryn-taylor"] {
   display: none !important;
 }
 
+/* Hide footer credit links (JS also removes them) */
+a[href^="https://www.bryntaylor.co.uk/"],
+a[href^="https://www.framer.com?via=bryn"] {
+  display: none !important;
+}
+
+/* Copy-to-clipboard tooltip for Email */
+a[data-copy-email] {
+  position: relative;
+}
+
+a[data-copy-email].is-copied::after {
+  content: "Copied";
+  position: absolute;
+  right: 42px; /* leave room for external icon */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
 
 
